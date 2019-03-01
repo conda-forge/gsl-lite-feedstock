@@ -11,7 +11,7 @@ source:
   sha256: 134c891b0b0f038d622554faa4040f6d419c534ed18c1b893f4f3ff788515d10
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -24,15 +24,29 @@ test:
     - cmake
     - {{ compiler('cxx') }}
     - make  # [unix]
+    - ninja
   files:
     - test
 
   commands:
+    - echo on  # [win]
     - cd test
-    - cmake . -DCMAKE_BUILD_TYPE=Release
+
+    - mkdir build_default
+    - cd build_default
+    - cmake .. -G"%CMAKE_GENERATOR%" -DCMAKE_BUILD_TYPE=Release  # [win]
+    - cmake .. -G"$CMAKE_GENERATOR" -DCMAKE_BUILD_TYPE=Release  # [unix]
     - cmake --build . --config Release
     - ./program  # [unix]
     - Release\\program.exe  # [win]
+    - cd ..
+
+    - mkdir build_ninja
+    - cd build_ninja
+    - cmake .. -G"Ninja" -DCMAKE_BUILD_TYPE=Release
+    - cmake --build . --config Release
+    - ./program  # [unix]
+    - program.exe  # [win]
 
 about:
   home: https://github.com/martinmoene/gsl-lite
