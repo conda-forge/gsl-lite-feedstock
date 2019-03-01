@@ -18,8 +18,8 @@ struct Widget
 
     void work() { non_owned_ptr = use( owned_ptr ); }
 
-    owner<int *> owned_ptr;	// if alias template support
-//  Owner(int *) owned_ptr;	// C++98 up
+//  owner<int *> owned_ptr;	// if alias template support
+    Owner(int *) owned_ptr;	// C++98 up
     int * non_owned_ptr;
 };
 
