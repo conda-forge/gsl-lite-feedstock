@@ -1,5 +1,5 @@
 {% set name = "gsl-lite" %}
-{% set version = "0.32.0" %}
+{% set version = "0.33.0" %}
 
 package:
   name: {{ name }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/martinmoene/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 134c891b0b0f038d622554faa4040f6d419c534ed18c1b893f4f3ff788515d10
+  sha256: ebbbfa28656fb43356dceec90663f8398d2cb0c583ebaf32c8a385d5efd0bbca
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
