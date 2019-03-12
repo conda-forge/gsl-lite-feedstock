@@ -7,4 +7,4 @@ find_package( gsl-lite REQUIRED )
 project( program-using-gsl-lite LANGUAGES CXX )
 
 add_executable(        program main.cpp )
-target_link_libraries( program PRIVATE gsl-lite::gsl-lite )
+target_link_libraries( program PRIVATE gsl::gsl-lite )

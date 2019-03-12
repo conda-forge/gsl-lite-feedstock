@@ -1,0 +1,26 @@
+From a25c9dfa97ef12d0c7092042fe34b3165644f0bb Mon Sep 17 00:00:00 2001
+From: Martin Moene <martin.moene@gmail.com>
+Date: Mon, 11 Mar 2019 08:15:24 +0100
+Subject: [PATCH] Use gsl-lite as CMake package folder name (#146, thanks to
+ @red1939)
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 8236aae..3901298 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -83,7 +83,7 @@ target_sources(
+ # Package configuration:
+ # Note: package_name and package_target are used in package_config_in
+ 
+-set( package_folder         "${package_nspace}" )
++set( package_folder         "${package_name}" )
+ set( package_target         "${package_name}-targets" )
+ set( package_config         "${package_name}-config.cmake" )
+ set( package_config_in      "${package_name}-config.cmake.in" )
+-- 
+2.20.1.windows.1
+
