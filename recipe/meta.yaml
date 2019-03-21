@@ -1,5 +1,5 @@
 {% set name = "gsl-lite" %}
-{% set version = "0.33.0" %}
+{% set version = "0.34.0" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/martinmoene/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: ebbbfa28656fb43356dceec90663f8398d2cb0c583ebaf32c8a385d5efd0bbca
+  sha256: a7d5b2672b78704ca03df9ef65bc274d8f8cacad3ca950365eef9e25b50324c5
   patches:
     - 0001-Use-gsl-lite-as-CMake-package-folder-name-146-thanks.patch
 
