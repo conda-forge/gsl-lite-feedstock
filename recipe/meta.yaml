@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - cmake
+    - ninja  # [win]
     - {{ compiler('cxx') }}
     - make  # [unix]
 
