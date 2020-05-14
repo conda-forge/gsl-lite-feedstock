@@ -1,5 +1,5 @@
 {% set name = "gsl-lite" %}
-{% set version = "0.34.0" %}
+{% set version = "0.37.0" %}
 
 package:
   name: {{ name }}
@@ -7,8 +7,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/martinmoene/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: a7d5b2672b78704ca03df9ef65bc274d8f8cacad3ca950365eef9e25b50324c5
+  url: https://github.com/martinmoene/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: a31d51b73742bb234acab8d2411223cf299e760ed713f0840ffed0dabe57ca38
 
 build:
   number: 0
@@ -53,7 +53,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A single-file header-only version of ISO C++ Guidelines Support Library (GSL) for C++98, C++11 and later'
+  summary: A single-file header-only version of ISO C++ Guidelines Support Library (GSL) for C++98, C++11 and later
 
 extra:
   recipe-maintainers:
