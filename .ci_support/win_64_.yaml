@@ -1,10 +1,12 @@
-CMAKE_GENERATOR:
-- NMake Makefiles
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2019
+gsl:
+- '2.7'
 target_platform:
 - win-64
