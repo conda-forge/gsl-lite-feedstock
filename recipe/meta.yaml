@@ -17,12 +17,14 @@ requirements:
   build:
     - cmake
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - make  # [unix]
 
 test:
   requires:
     - cmake
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - make  # [unix]
     - ninja
   files:
