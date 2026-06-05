@@ -16,7 +16,7 @@ struct Widget
     Widget() : owned_ptr( new int(42) ) {}
     ~Widget() { delete owned_ptr; }
 
-    void work() { non_owned_ptr = use( owned_ptr ); }
+    void work() { non_owned_ptr = use( not_null<int *>( owned_ptr ) ); }
 
     owner<int *> owned_ptr;
     int *        non_owned_ptr;
